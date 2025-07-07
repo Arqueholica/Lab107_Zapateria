@@ -1,11 +1,13 @@
 public abstract class Zapatos {
+    private String type;
     private String marca;
     private String modelo;
     private String material;
     private double talla;
     private double precio;
 
-    public Zapatos(String marca, String modelo, String material, double talla, double precio) {
+    public Zapatos(String type, String marca, String modelo, String material, double talla, double precio) {
+        this.type = type;
         this.marca = marca;
         this.modelo = modelo;
         this.material = material;
@@ -15,6 +17,14 @@ public abstract class Zapatos {
 
     //GETTERS&SETTERS
 
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getMarca() {
         return marca;
@@ -62,7 +72,8 @@ public abstract class Zapatos {
 
     @Override
     public String toString() {
-        return "Marca: " + marca + '\n' +
+        return "Estilo: " + type + '\n' +
+                "Marca: " + marca + '\n' +
                 "Modelo: " + modelo + '\n' +
                 "Material: " + material + '\n' +
                 "Talla: " + talla + '\n' +
