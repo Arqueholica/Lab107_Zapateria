@@ -1,0 +1,71 @@
+public abstract class Zapatos {
+    private String marca;
+    private String modelo;
+    private String material;
+    private double talla;
+    private double precio;
+
+    public Zapatos(String marca, String modelo, String material, double talla, double precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.material = material;
+        this.talla = talla;
+        this.precio = precio;
+    }
+
+    //GETTERS&SETTERS
+
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public double getTalla() {
+        return talla;
+    }
+
+    public void setTalla(double talla) {
+        this.talla = talla;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+
+    //Visores
+
+
+    @Override
+    public String toString() {
+        return "Marca: " + marca + '\n' +
+                "Modelo: " + modelo + '\n' +
+                "Material: " + material + '\n' +
+                "Talla: " + talla + '\n' +
+                "Precio: " + precio + " €" + '\n';
+    }
+}

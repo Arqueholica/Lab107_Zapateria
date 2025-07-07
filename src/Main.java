@@ -1,15 +1,40 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        /*
+            qué necesito crear aparte:
+            - clase abstracta zapatos --> base del resto madre suprema
+                                      --> marca modelo material talla precio
+            - tres clases que heredan de zapatos --> hijas: elegante, casual, deporte
+
+
+            dentro del ejecutable:
+            - dos instancias por clase
+            - arrayList con todos los zapatos
+
+            scanner:
+            - preguntar tipo de zapato
+            - preguntar modelo --> muestra el precio
+                               --> se añade a una variable gastoTotal (sum +=)
+            - se repite el bucle hasta que se escriba "salir" --> sout del gastoTotal
+                                                              --> sout "hasta la próxima"
+         */
+        Zapatos newShoes = new Elegante("Pi Hy Pi", "Cayetano", "Cuero", 41.5, 189.5);
+        Zapatos newShoes2 = new Elegante("Oh Sea", "Cari", "Plástico", 38, 274.26);
+
+
+
+        ArrayList<Object> zapateriasPaqui = new ArrayList<>();
+
+        zapateriasPaqui.add(newShoes);
+        zapateriasPaqui.add(newShoes2);
+
+        System.out.println(zapateriasPaqui);
+
+
     }
 }
