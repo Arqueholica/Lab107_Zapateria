@@ -6,6 +6,8 @@ public abstract class Zapatos {
     private double talla;
     private double precio;
 
+//  CONSTRUCTOR
+
     public Zapatos(String type, String marca, String modelo, String material, double talla, double precio) {
         this.type = type;
         this.marca = marca;
@@ -67,7 +69,7 @@ public abstract class Zapatos {
     }
 
 
-    //Visores
+    //VISORES
 
 
     @Override
@@ -79,4 +81,10 @@ public abstract class Zapatos {
                 "Talla: " + talla + '\n' +
                 "Precio: " + precio + " €" + '\n';
     }
+
+
+//    @Override
+//    public String toString() {
+//        return String.format("Modelo: %s | Marca: %s | Material: %s | Talla: %d | Precio: %d", marca, modelo, material, talla,precio );
+//    }
 }

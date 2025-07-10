@@ -25,8 +25,8 @@ public class Main {
             - se repite el bucle hasta que se escriba "salir" --> sout del gastoTotal ✅
                                                               --> sout "hasta la próxima" ✅
          */
-        Zapatos newShoes = new Elegante( "Elegante","Pi Hy Pi", "Cayetano", "Cuero", 41.5, 189.50);
-        Zapatos newShoes2 = new Elegante( "Elegante", "Oh Sea", "Cari", "Plástico", 38, 274.26);
+        Zapatos newShoes = new Elegante( "Elegante","Pi Hy Pi", "Cayetano", "Cuero", 41.5, 189.50, true);
+        Zapatos newShoes2 = new Elegante( "Elegante", "Oh Sea", "Cari", "Plástico", 38, 274.26, false);
 
         Zapatos newShoes3 = new Casual("Casual","Relax", "dontDoIt", "Algodón", 39.5, 157.69);
         Zapatos newShoes4 = new Casual("Casual", "Snoop", "doubleD", "Cáñamo", 42, 420);
@@ -47,10 +47,13 @@ public class Main {
 //        System.out.println(zapateriasPaqui);
         System.out.println("\n" + "Modelos disponibles:" + "\n");
 
-        for (int i = 0; i < zapateriasPaqui.size(); i++) {
-
-            System.out.println(zapateriasPaqui.get(i));
-        };
+//        for (int i = 0; i < zapateriasPaqui.size(); i++) {
+//
+//            System.out.println(zapateriasPaqui.get(i));
+//        };
+        for(Zapatos z: zapateriasPaqui){
+            System.out.println(z);
+        }
 
 
         Scanner sc = new Scanner(System.in);
@@ -71,6 +74,7 @@ do {
 
         for (Zapatos zapas : zapateriasPaqui){
         String modOk = zapas.getModelo();
+
          if(modOk.equalsIgnoreCase(modelo)){
             double preu = zapas.getPrecio();
              System.out.println("Agregado el modelo " + modelo + " por " + preu + "€" );
@@ -80,9 +84,10 @@ do {
              System.out.println("El gasto total es de " + gastoTotal + "€");
             }
          }
-        if(!found){
+
+          if(!found){
             System.out.println("No tenemos ese modelo aún");
-        }
+            }
         }
 
 }while(!answer.equalsIgnoreCase("salir"));
